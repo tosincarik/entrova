@@ -1,0 +1,25 @@
+2025-10-02 10:27:46,176 - INFO - Loading users.csv into stg_users...
+2025-10-02 10:27:46,178 - ERROR - Error loading users.csv into stg_users: [Errno 2] No such file or directory: 'users.csv'
+2025-10-02 10:46:26,068 - ERROR - Error extracting tables: (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'demo_sessions'. (208) (SQLExecDirectW)")
+[SQL: SELECT * FROM demo_sessions]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-02 10:46:38,647 - INFO - Tables extracted successfully.
+2025-10-02 10:47:28,311 - INFO - Transformations completed successfully.
+2025-10-02 10:47:39,438 - ERROR - Error loading tables: (pyodbc.ProgrammingError) ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The specified schema name "analytics" either does not exist or you do not have permission to use it. (2760) (SQLExecDirectW)')
+[SQL: 
+CREATE TABLE analytics.user_cumulative_signups (
+	signup_date DATETIME NULL, 
+	cumulative_users BIGINT NULL
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-02 10:49:22,739 - INFO - All tables loaded into analytics schema successfully.
+2025-10-02 10:49:22,739 - INFO - ETL workflow completed successfully.
+2025-10-02 13:52:40,942 - INFO - Tables extracted successfully.
+2025-10-02 13:53:30,490 - INFO - Transformed Users data
+2025-10-02 14:03:19,039 - INFO - Tables extracted successfully.
+2025-10-02 14:03:24,327 - INFO - Transformed Users data
+2025-10-02 14:03:37,751 - INFO - Transformed Demo Sessions data
+2025-10-02 14:04:03,513 - INFO - Transformed Engagement data
+2025-10-02 14:05:51,743 - INFO - Loaded transformed data into SQL Server successfully
